@@ -3,7 +3,8 @@ import {
     View,
     Text,
     FlatList,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity
 } from 'react-native'
 
 import {Feather} from '@expo/vector-icons'
@@ -20,21 +21,21 @@ const contacts = [
     { id: '8', name: 'Atefa', phone: '0782943023', email: 'Atefa@gmail.com'},
     { id: '9', name: 'Maryam', phone: '0745347600', email: 'maryam@gmail.com'},
 ]
-export default function Contacts(){
+export default function Contacts({navigation}){
    return (
        <View>
     <FlatList
     data={contacts}
     keyExtractor={(item)=>item.id}
     renderItem={({item}) => {
-        return <ContactListItem name={item.name} phone={item.phone} />
+        return <ContactListItem name={item.name} phone={item.phone} onPress={()=> navigation.navigate('Profile',{item:item})} />
     }}
     />
-    <View style={styles.floatButton}>
+    <TouchableOpacity style={styles.floatButton} onPress={()=> navigation.navigate('CreateContact')}> 
         <Text>
         <Feather name="plus" size={28} color="white" />
         </Text>
-    </View>
+    </TouchableOpacity>
     </View>
    )
 

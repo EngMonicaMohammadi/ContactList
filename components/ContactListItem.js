@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         paddingVertical:16,
         paddingHorizontal:24,
         borderBottomColor: colors.secondry,
+        borderBottomColor: 'gray',
         borderBottomWidth: 0.5
     
     },

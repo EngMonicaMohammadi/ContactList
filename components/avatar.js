@@ -22,5 +22,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    avatarTxt: {
+        color: colors.white
     }
 })
