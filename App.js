@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator} from "@react-navigation/stack";
 import * as SQLite from 'expo-sqlite';
 const Stack = createStackNavigator();
-const db = SQLite.openDatabase('contacts.db')
+const db = SQLite.openDatabase('contact.db')
 
 import Contact from './screen/Contacts'
 import CreateContact from './screen/CreateContacts'
@@ -46,4 +46,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f4f4'
   },
 });
-
